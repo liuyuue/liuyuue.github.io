@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yue Lab</title>
+  <style>
+    :root {
+      --accent: #b08968;
+      --text: #222;
+      --bg: #fff;
+      --max-width: 1100px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .nav {
+      margin: 0 auto;
+      max-width: var(--max-width);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      gap: .75rem;
+      align-items: center;
+    }
+    .brand h1 {
+      font-size: 1.45rem;
+      margin: 0;
+    }
+    .brand small {
+      display: block;
+      font-size: .7rem;
+      letter-spacing: .05em;
+      color: #666;
+    }
+    nav a {
+      margin-left: 1.25rem;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      position: relative;
+    }
+    nav a.active::after, nav a:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1rem;
+      height: 2px;
+      background: #000;
+    }
+    .hero {
+      position: relative;
+      height: 360px;
+      background: url("hero-bg.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.45);
+    }
+    .hero-content {
+      position: relative;
+      max-width: 720px;
+      padding: 0 1rem;
+    }
+    .hero h2 {
+      font-size: clamp(2.3rem, 3vw, 3rem);
+      margin-bottom: .8rem;
+      font-weight: 700;
+    }
+    .hero p { font-size: 1.1rem; }
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.25rem 1rem;
+    }
+    h3.section-title {
+      font-size: 1.7rem;
+      margin-bottom: 1.5rem;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 2.5rem;
+    }
+    .card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 1.2rem;
+    }
+    .card {
+      border-left: 3px solid #000;
+      padding-left: 1rem;
+    }
+    .card h4 { margin: 0 0 .25rem; }
+    .news-item small { color: #777; }
+    .members-grid {
+      display: grid;
+      gap: 1.3rem;
+      grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
+    }
+    .member {
+      border: 1px solid #eee;
+      padding: 1rem;
+      border-radius: .5rem;
+      background: #fff;
+    }
+    .pub-list { padding-left: 1.25rem; }
+    footer {
+      margin-top: 3rem;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem 2.5rem;
+      font-size: .8rem;
+    }
+    @media (max-width: 850px) {
+      .two-col { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .hero { height: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div>
+          <h1>Yue Lab</h1>
+          <small>Laboratory of Computational Intelligence</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#research">Research</a>
+        <a href="#news">News</a>
+        <a href="#members">Lab Members</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero" id="home">
+    <div class="hero-content">
+      <h2>Laboratory of Computational Intelligence</h2>
+      <p>We study how neural circuit dynamics support flexible, generalizable behavior.</p>
+    </div>
+  </div>
+
+  <section id="research">
+    <h3 class="section-title">Research</h3>
+    <div class="two-col">
+      <div>
+        <p>Our group combines theory, neural network modeling, and collaborations with experimental labs to understand how brains learn abstract structure and reuse it across tasks. We build biologically informed RNNs, analyze their dynamics, and generate testable predictions for neural recordings.</p>
+        <p>Current themes include:</p>
+        <ul>
+          <li>Hierarchical decision making and context inference</li>
+          <li>Neural mechanisms of rule learning and generalization</li>
+          <li>Low-rank and cell-type-specific circuit models</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="card-list">
+          <li class="card">
+            <h4>Task generalization</h4>
+            <p>How can a circuit learn a small set of rules and apply them broadly?</p>
+          </li>
+          <li class="card">
+            <h4>Multi-timescale integration</h4>
+            <p>Mechanisms for slow context and fast choice.</p>
+          </li>
+          <li class="card">
+            <h4>Brain–AI parallels</h4>
+            <p>Using neuroscience to inspire efficient AI systems.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h3 class="section-title">News</h3>
+    <div class="card-list">
+      <div class="card news-item">
+        <h4>We are hiring!</h4>
+        <small>Nov 2025</small>
+        <p>Looking for postdocs and students interested in computational/theoretical neuroscience.</p>
+      </div>
+      <div class="card news-item">
+        <h4>Paper accepted</h4>
+        <small>Oct 2025</small>
+        <p>Our work on hierarchical RNNs for context switching is accepted to <em>Neuron</em>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="members">
+    <h3 class="section-title">Lab Members</h3>
+    <div class="members-grid">
+      <div class="member">
+        <h4>Yue Liu, Ph.D.</h4>
+        <p>Principal Investigator</p>
+      </div>
+      <div class="member">
+        <h4>Postdoc – TBD</h4>
+        <p>Computational modeling</p>
+      </div>
+      <div class="member">
+        <h4>Graduate Student – TBD</h4>
+        <p>Neural data analysis</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h3 class="section-title">Selected Publications</h3>
+    <ol class="pub-list">
+      <li>Author, Y., &amp; Collaborator, X. (2024). Title of the cool paper. <em>Journal of Neuroscience</em>.</li>
+      <li>Author, Y. (2023). Modeling hierarchical decisions with RNNs. <em>eLife</em>.</li>
+      <li>Author, Y. (2022). Cell-type specific computations in flexible behavior. <em>Nat. Commun.</em></li>
+    </ol>
+  </section>
+
+  <section id="contact">
+    <h3 class="section-title">Contact</h3>
+    <p>Florida Atlantic University – Stiles-Nicholson Brain Institute<br />
+      Email: <a href="mailto:yue@example.edu">yue@example.edu</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Yue Lab. All rights reserved.
+  </footer>
+</body>
+</html>
