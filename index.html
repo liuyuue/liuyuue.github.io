@@ -126,10 +126,22 @@
       grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
     }
     .member {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;              /* space between photo and text */
       border: 1px solid #eee;
       padding: 1rem;
       border-radius: .5rem;
       background: #fff;
+      max-width: 600px;         /* optional: keeps nice narrow layout */
+      margin: 0 auto 1.5rem;    /* centers the whole card in the grid */
+    }
+    .headshot {
+      width: 180px;        /* or 160px if you want smaller */
+      height: auto;        /* keeps original aspect ratio */
+      object-fit: cover;   /* ensures it fills the box nicely */
+      border-radius: 0px;  /* optional: rounded corners (set to 0 for sharp) */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
     .pub-list { padding-left: 1.25rem; }
     footer {
@@ -145,15 +157,7 @@
       nav { display: none; }
       .hero { height: 280px; }
     }
-    .headshot {
-      width: 180px;        /* or 160px if you want smaller */
-      height: auto;        /* keeps original aspect ratio */
-      object-fit: cover;   /* ensures it fills the box nicely */
-      border-radius: 0px;  /* optional: rounded corners (set to 0 for sharp) */
-      display: block;
-      margin: 0 auto 0.8rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
+    
   </style>
 </head>
 <body>
