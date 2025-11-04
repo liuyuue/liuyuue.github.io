@@ -67,12 +67,19 @@
       background: #000;
     }
     
-
     .hero {
-      height: 400px;  /* make taller if you want more image visible */
-      background: url("water_mountain.jpg") center/contain no-repeat;
-      background-color: #000;  /* or #fff depending on site */
+      position: relative;
+      height: 400px;
+      /* background: url("hero-bg.jpg") center/cover no-repeat; */
+      background: url("water_mountain.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background-color: #fff;  /* or #fff depending on site */
     }
+
     
     .hero::before {
       content: "";
