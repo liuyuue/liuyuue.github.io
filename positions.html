@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Positions | Liu Lab of Computational Neuroscience</title>
+  <style>
+    :root {
+      --accent: #b08968;
+      --text: #222;
+      --bg: #fff;
+      --max-width: 1100px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .nav {
+      margin: 0 auto;
+      max-width: var(--max-width);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      gap: .75rem;
+      align-items: center;
+    }
+    .brand h1 {
+      font-size: 1.45rem;
+      margin: 0;
+    }
+    .brand small {
+      display: block;
+      font-size: .7rem;
+      letter-spacing: .05em;
+      color: #666;
+    }
+    nav a {
+      margin-left: 1.25rem;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      position: relative;
+    }
+    nav a.active::after, nav a:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1rem;
+      height: 2px;
+      background: #000;
+    }
+    main { min-height: 65vh; }
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 1rem;
+    }
+    h3.section-title {
+      font-size: 1.7rem;
+      margin-bottom: 1.5rem;
+    }
+    .positions h4 {
+      font-size: 1.25rem;
+      margin: 2rem 0 .5rem;
+    }
+    .positions li { margin-bottom: .4rem; }
+    footer {
+      margin-top: 3rem;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem 2.5rem;
+      font-size: .8rem;
+    }
+    @media (max-width: 850px) {
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div>
+          <h1>Liu Lab of Computational Neuroscience</h1>
+          <small>at Florida Atlantic University</small>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#members">Lab Members</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="positions.html" class="active">Open Positions</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="positions" class="positions">
+      <p><a href="index.html">&larr; Back to Lab</a></p>
+      <h3 class="section-title">Open Positions</h3>
+
+      <h4>PhD students</h4>
+      <p>If you are interested in joining the lab, please apply through one of the following programs:</p>
+      <ul>
+        <li><a href="https://www.fau.edu/research/programs/neuroscience/" target="_blank" rel="noopener noreferrer">Florida Atlantic University's Neuroscience Graduate Program</a></li>
+        <li><a href="https://www.mpfi.org/training/imprs/" target="_blank" rel="noopener noreferrer">The IMPRS program at Max Planck Florida Institute for Neuroscience</a></li>
+        <li><a href="https://www.fau.edu/science/areas-of-study/integrative-biology/" target="_blank" rel="noopener noreferrer">The Integrative Biology program at Florida Atlantic University</a></li>
+      </ul>
+      <p>You should have a solid quantitative background (basic knowledge about linear algebra, differential equations, probability and statistics, single and multivariable calculus, and programming skills) and have a strong interest in understanding the brain (you don't need to have prior research experience in neuroscience or a degree in neuroscience). Feel free to express your interest prior to applying by sending me an email (<a href="mailto:yueliu@fau.edu">yueliu@fau.edu</a>).</p>
+
+      <h4>Postdocs</h4>
+      <p>We are looking for postdocs with a PhD degree in neuroscience, physics, mathematics, computer science, or a related field, preferably with research experience in computational neuroscience. If you are interested, please send me an email (<a href="mailto:yueliu@fau.edu">yueliu@fau.edu</a>) with your CV and a brief description of your past research and future research interests.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Liu Lab. All rights reserved.
+  </footer>
+</body>
+</html>
