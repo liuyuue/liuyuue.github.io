@@ -6,17 +6,100 @@
   <title>Yue Liu | Yue Lab</title>
   <link rel="stylesheet" href="style.css"> <!-- optional if you split styles -->
   <style>
-    body { font-family: -apple-system, sans-serif; margin: 2rem auto; max-width: 800px; line-height: 1.6; }
-    a { text-decoration: none; color: #0066cc; }
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; margin: 0; color: #222; line-height: 1.6; }
+    :root { --max-width: 1280px; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .nav {
+      margin: 0 auto;
+      max-width: var(--max-width);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      gap: .75rem;
+      align-items: center;
+    }
+    .brand h1 {
+      font-size: 1.45rem;
+      margin: 0;
+    }
+    .brand h1 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .brand small {
+      display: block;
+      font-size: .7rem;
+      letter-spacing: .05em;
+      color: #666;
+    }
+    nav {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    nav a {
+      margin-left: 1.25rem;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      position: relative;
+    }
+    nav a.active::after, nav a:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1rem;
+      height: 2px;
+      background: #000;
+    }
+    main { margin: 2rem auto; max-width: 800px; padding: 0 1.25rem; }
+    main a { text-decoration: none; color: #0066cc; }
+    @media (max-width: 850px) {
+      nav { display: none; }
+    }
     .headshot { width: 200px; border-radius: 8px; margin-bottom: 1rem; }
   </style>
 </head>
 <body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div>
+          <h1><a href="index.html">Liu Lab of Computational Neuroscience</a></h1>
+          <small>at Florida Atlantic University</small>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#members">Lab Members</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="positions.html">Open Positions</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
   <a href="index.html">&larr; Back to Lab</a>
   <h1>Yue Liu, Ph.D.</h1>
   <img src="yue.jpg" alt="Yue Liu" class="headshot" />
   <p><strong>Principal Investigator</strong></p>
   <p>I am interested in understanding the neural circuit basis of fluid intelligence — how the brain generalizes from limited experience to solve new problems. My work combines computational modeling and theory to study how neural dynamics support flexible cognition.</p>
   <p>Before joining FAU, I was a postdoctoral researcher in the lab of <a href="https://www.cns.nyu.edu/wanglab/" target="_blank">Xiao-Jing Wang</a> at New York University, and earned my Ph.D. in Physics working with <a href="https://sites.bu.edu/tcn/" target="_blank">Marc Howard</a>  and <a href="https://www.bu.edu/hasselmo/" target="_blank">Michael Hasselmo</a> at Boston University. Before that, I studied Physics at Fudan University in Shanghai, China</p>
+  </main>
 </body>
 </html>
